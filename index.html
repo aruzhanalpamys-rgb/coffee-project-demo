@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .container {
+      background-color: white;
+      margin: 20px;
+    }
+    .header {
+      text-align: center;
+      color: antiquewhite;
+      background-color: rgb(78, 39, 11);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .header img {
+      width: 20px;
+      height: 20px;
+    }
+    .card-group {
+      background-color: antiquewhite;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 2;
+    }
+    .card {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgb(143, 87, 47);
+    }
+
+    .card:last-child {
+      border-bottom: none;
+    }
+    .item-desc {
+      font-size: 13px;
+      color: rgb(143, 87, 47);
+    }
+    .item {
+      color: rgb(143, 87, 47);
+    }
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      gap: 20px;
+    }
+    .name-group,
+    .payment-group {
+      background-color: antiquewhite;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .name-group {
+      height: 120px;
+    }
+    .payment-group {
+      height: 140px;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      color: rgb(123, 73, 38);
+    }
+    .order-section {
+      display: flex;
+      gap: 20px;
+    }
+    input {
+      width: 95%;
+      border-radius: 20px;
+      background-color: antiquewhite;
+      height: 30px;
+      margin: 10px 0px 0px 0px;
+      border: 2px solid rgb(123, 73, 38);
+      padding: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+    #CCV {
+      width: 35%;
+    }
+    .totals {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 420px;
+      margin-right: 420px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+    .left {
+      text-align: left;
+    }
+    .right {
+      text-align: right;
+    }
+    .order-button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 30px;
+      margin-top: 30px;
+      cursor: pointer;
+      background-color: rgb(231, 195, 170);
+      border: none;
+      font-weight: 500;
+    }
+    .order-button:hover {
+      background-color: rgb(121, 69, 6);
+    }
+  </style>
+  <body>
+    <div class="header">
+      <img src="coffee_masters_logo.png" alt="Cofee logo" />
+      <h2>Coffee Masters</h2>
+    </div>
+    <div class="container">
+      <!-- <div class="header">
+        <img src="coffee_masters_logo.png" alt="Cofee logo" />
+        <h2>Coffee Masters</h2>
+      </div> -->
+      <div class="order-section">
+        <div class="card-group">
+          <div class="card">
+            <div>
+              <h4 class="item">ITEMS</h4>
+              <h3 class="item-title">Cappucino</h3>
+              <p class="item-desc">Light Foam</p>
+            </div>
+            <h3 class="price">$6.00</h3>
+          </div>
+
+          <div class="card">
+            <div>
+              <h3 class="item-title">Cappucino</h3>
+              <p class="item-desc">Almond Milk<br />Double Espresso Shot</p>
+            </div>
+            <h3 class="price">$7.90</h3>
+          </div>
+
+          <div class="card">
+            <div>
+              <h3 class="item-title">Croissant</h3>
+              <p class="item-desc">Butter</p>
+            </div>
+            <h3 class="price">$5.37</h3>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="name-group">
+            <label for="name">NAME</label>
+            <input type="text" placeholder="Name for order" />
+          </div>
+
+          <div class="payment-group">
+            <label for="payment">PAYMENT</label>
+            <input type="text" placeholder="Card number" />
+            <input type="text" id="CCV" placeholder="CCV number" />
+          </div>
+        </div>
+      </div>
+
+      <div class="totals">
+        <div class="row">
+          <span class="left">Subtotal:</span>
+          <span class="right">$19.27</span>
+        </div>
+
+        <div class="row">
+          <span class="left">Tax:</span>
+          <span class="right">$0.96</span>
+        </div>
+
+        <div class="row">
+          <span class="left"><strong>Total:</strong></span>
+          <span class="right"><strong>$20.23</strong></span>
+        </div>
+      </div>
+      <button class="order-button">Place order</button>
+    </div>
+  </body>
+</html>
